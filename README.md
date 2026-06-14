@@ -148,20 +148,6 @@ Our baseline aligns with the published range. SdFT λ=0.7 reaches the upper boun
 
 ---
 
-## Repository Structure
-
-```
-anchorft-sst2/
-├── Anchored_Adaptation_...ipynb   # Main experiment notebook (run on Colab T4)
-├── results.json                   # Full per-epoch metrics, hyperparameters, timestamp
-├── learning_curves.png            # Val accuracy, train loss, val loss across epochs
-├── kd_analysis.png                # KD/task loss decomposition + accuracy bar chart
-├── README.md                      # This file
-└── LICENSE                        # CC BY-NC-ND 4.0
-```
-
----
-
 ## Reproducing the Experiments
 
 ### Requirements
