@@ -1,0 +1,76 @@
+{
+  "experiment": "Self-Distillation Fine-Tuning vs Standard FT",
+  "paper": "Fine-Tuning Large Language Models: Mechanisms and Adaptation Strategies",
+  "dataset": "SST-2 (GLUE)",
+  "model": "distilbert-base-uncased",
+  "hyperparameters": {
+    "seed": 42,
+    "epochs": 3,
+    "batch_size": 32,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "max_seq_len": 128,
+    "kd_temperature": 4.0
+  },
+  "timestamp": "2026-06-14T10:56:21.274459",
+  "results": {
+    "Standard FT (\u03bb=0)": {
+      "best_val_accuracy": 0.9059633027522935,
+      "delta_vs_baseline": 0.0,
+      "val_acc_per_epoch": [
+        0.9059633027522935,
+        0.9048165137614679,
+        0.9048165137614679
+      ],
+      "train_loss_per_epoch": [
+        0.26747957865515115,
+        0.12484392706247273,
+        0.08383003049452663
+      ],
+      "val_loss_per_epoch": [
+        0.25428966326372965,
+        0.30256069877317976,
+        0.351607008171933
+      ]
+    },
+    "SdFT (\u03bb=0.3)": {
+      "best_val_accuracy": 0.908256880733945,
+      "delta_vs_baseline": 0.002293577981651418,
+      "val_acc_per_epoch": [
+        0.908256880733945,
+        0.9071100917431193,
+        0.9059633027522935
+      ],
+      "train_loss_per_epoch": [
+        0.3123231685996905,
+        0.2618145419766954,
+        0.2485280742271496
+      ],
+      "val_loss_per_epoch": [
+        0.3112510229860033,
+        0.3150622397661209,
+        0.3188487482922418
+      ]
+    },
+    "SdFT (\u03bb=0.7)": {
+      "best_val_accuracy": 0.911697247706422,
+      "delta_vs_baseline": 0.005733944954128489,
+      "val_acc_per_epoch": [
+        0.911697247706422,
+        0.911697247706422,
+        0.9071100917431193
+      ],
+      "train_loss_per_epoch": [
+        0.1778427807070014,
+        0.16911792781319018,
+        0.16695793217972735
+      ],
+      "val_loss_per_epoch": [
+        0.49603477333273205,
+        0.4982677080801555,
+        0.4950517841747829
+      ]
+    }
+  }
+}
